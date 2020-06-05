@@ -1,0 +1,30 @@
+import Router, { request, response } from 'express';
+import agendamentosApi from './agendamentos.routes';
+import usuariosApi from './usuarios.routes';
+import sessao from './sessao.routes';
+import depoimentos from './depoimentos.routes';
+import enderecos from './enderecos.routes';
+import categorias from './categorias.routes';
+import produtos from './produtos.routes';
+import carrinhos from './carrinhos.routes';
+import produtocarrinho from './produtocarrinho.routes';
+import pedidos from './pedidos.routes';
+import pedidosprodutos from './pedidoproduto.routes';
+import recuperacaosenha from './recuperacaoSenha.routes';
+
+const routes = Router();
+routes.use(Router.json());
+routes.use('/Agendamentos', agendamentosApi);
+routes.use('/Usuario', usuariosApi);
+routes.use('/Sessao', sessao);
+routes.use('/Depoimentos', depoimentos);
+routes.use('/Enderecos', enderecos);
+routes.use('/Categorias', categorias);
+routes.use('/Produtos', produtos);
+routes.use('/Carrinhos', carrinhos);
+routes.use('/ProdutosCarrinho', produtocarrinho);
+routes.use('/Pedidos', pedidos);
+routes.use('/PedidosProdutos', pedidosprodutos);
+routes.use('/RecuperacaoSenha', recuperacaosenha);
+
+export default routes;
